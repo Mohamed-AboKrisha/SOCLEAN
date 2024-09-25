@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>SOCLEAN</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <style>
+    /* Style for the background image */
+    body {
+      background-image: url('wallpaperflare.com_wallpaper_1.jpg');
+      height: 100vh;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      position: relative;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    /* Style for the welcome paragraph */
+    .welcome-message {
+      backdrop-filter: blur(5px);
+      background-color: rgba(0, 0, 0, 0.1);
+      padding: 40px;
+      border-radius: 15px;
+      color: white;
+      text-align: justify;
+      margin: 200px auto; /* Reduced margin for spacing */
+      max-width: 600px; /* Limited width for the welcome message */
+    }
+
+    /* Style for the sections */
+    .section {
+      backdrop-filter: blur(5px);
+      background-color: rgba(0, 0, 0, 0.2);
+      padding: 40px;
+      border-radius: 10px; /* Slightly reduced border radius */
+      color: white;
+      text-align: justify;
+      margin: 20px 0; /* Margin for spacing */
+      width: 100%; /* Full width */
+    }
+
+    /* Style for the dashboard */
+    .dashboard-container {
+      display: flex;
+      justify-content: flex-start; /* Align to the left */
+      align-items: flex-start;
+    }
+
+    /* Style for the login form */
+    .login-form {
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 30px;
+      border-radius: 15px;
+      width: 90%;
+      max-width: 600px; /* Increased width */
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      margin: 20px 20px 20px 0; /* Margin for spacing */
+    }
+
+    .navbar {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    .nav-link {
+      color: #1630a5 !important;
+    }
+
+    .nav-link:hover {
+      text-decoration: none;
+    }
+
+    /* Video section styles */
+    .video-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .video {
+      margin: 10px;
+      max-width: 100%; /* Ensure videos take full width */
+      flex: 1 1 45%; /* Responsive sizing */
+    }
+
+    /* About Us section styles */
+    .about-us img {
+      max-width: 70%; /* Larger image size */
+      border-radius: 15px;
+      margin-top: 20px;
+      margin-left: 20px; /* Add space between image and text */
+    }
+  </style>
+  <script>
+    function handleLogin(event) {
+      event.preventDefault(); // Prevent form submission
+      const email = document.getElementById('userEmail').value;
+      const password = document.getElementById('userPassword').value;
+
+      // Check for valid login credentials
+      if ((email === 'mohamed' || email === 'mohamedayman42@gmail.com') && password === '123456789') {
+        window.location.href = 'https://app.arduino.cc/dashboards/11be683d-a9e0-4156-9e8f-69cd106ee447';
+      } else {
+        alert('Invalid username or password. Please try again.');
+      }
+    }
+  </script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <a class="navbar-brand" href="#">
+          <img src="white_logo-Photoroom.png" alt="Logo" style="height: 40px;">
+        </a>
+      
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto" style="font-family: Arial; font-size: 20px;">
+                <li class="nav-item">
+                    <a class="nav-link" href="#dashboard">Dashboard</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#videos">Videos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about_us">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contacts">Contacts</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+    <!-- Welcome Message -->
+    <div class="welcome-message" style="margin-left: 2%; color: white;">
+        <h2 style="font-weight: bolder;">Welcome to SOCLEAN</h2>
+        <p style="font-size: large; font-weight: 500;">
+            A pioneering company dedicated to enhancing the efficiency of your solar cells through advanced robotic technology.               
+        </p>
+    </div>  
+
+    <!-- Dashboard Section -->
+    <div class="section" id="dashboard">
+        <h3 class="text-center" style="color: white">Dashboard</h3>
+        <div class="dashboard-container">
+            <div class="login-form">
+                <form onsubmit="handleLogin(event)">
+                    <div class="form-group">
+                        <label for="userEmail">User / Email:</label>
+                        <input type="email" class="form-control" id="userEmail" placeholder="Enter email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="userPassword">Password:</label>
+                        <input type="password" class="form-control" id="userPassword" placeholder="Password" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Go to dashboard</button>
+                </form>
+            </div>
+            <div class="image-placeholder" style="margin-left: 20px;">
+                <img src="IOT_dashboard.jpg" alt="Dashboard Image" style="width: 600px; height: auto; margin-left: 30%;"/> <!-- Placeholder for image -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Videos Section -->
+    <div class="section" id="videos">
+        <h2>Our Videos</h2>
+        <div class="video-container row">
+            <div class="video col-md-6">
+                <iframe width="100%" height="300" src="V01.mp4" frameborder="0" allowfullscreen></iframe>
+                <p>Version 1</p>
+            </div>
+            <div class="video col-md-6">
+                <iframe width="100%" height="300" src="v02.mp4" frameborder="0" allowfullscreen></iframe>
+                <p>Version 2</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Us Section -->
+    <div class="section about-us" id="about_us">
+        <h2>About Us</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <p style="font-size: larger;">
+                   <br> <br> <br> We are a team of three energetic mechatronics engineers who are passionate about learning and innovation.<br> With our combined knowledge, we aim to enhance the extraction of energy from solar cells, contributing to a sustainable future.
+                   <br>  Our mission is to leverage cutting-edge technology to improve the efficiency of solar energy systems.<br> We believe that through collaboration and continuous learning, we can create solutions that not only benefit our clients but also contribute to a greener planet.
+                </p>
+            </div>
+            <div class="col-md-6 d-flex justify-content-end">
+                <img src="WhatsApp Image 2024-09-24 at 13.00.19_ff826846.jpg" alt="About Us Image">
+            </div>
+        </div>
+    </div>
+
+    <!-- Contacts Section -->
+    <div class="section" id="contacts">
+        <h2>Contact Us</h2>
+        <p>If you have any questions or inquiries, feel free to reach out to us:</p>
+        <p>Email: mohamedayman42@gmail.com</p>
+        <p>Phone: 01151390158</p>
+        <p>Address: smart_village - New_Assuit - Assuit - Egypt</p>
+    </div>
+
+</body>
+</html>
